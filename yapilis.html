@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gurme Hamburger Tarifi</title>
+
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .tarif-kart {
+        max-width: 700px;
+        margin: 40px auto;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .tarif-resim {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .baslik {
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      .alt-baslik {
+        color: #888;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="tarif-kart bg-white">
+      <img
+      src="data:image/jpeg;base64,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"
+        class="tarif-resim"
+        alt="Tarif Fotoğrafı"
+      />
+
+      <div class="p-4">
+        <h1 class="baslik">Gurme Hamburger Tarifi</h1>
+        <div class="alt-baslik">Gurmelere sesleniyorum 📢 mutfağın yıldızı olmaya hazır olun 🤩</div>
+
+        <h3>Malzemeler</h3>
+        
+        <ul>
+          <li>700gr dana döş kıyma</li>
+          <li>1 tatlı kaşığı tuz</li>
+          <li>1 tatlı kaşığı taze çekilmiş tane karabiber</li>
+          <li>1 tatlı kaşığı hardal</li>
+          <li>1 tatlı kaşığı pekmez</li>
+        </ul>
+        <p>Ev yapımı hamburger ekmeği;</p>  
+        <ul>
+          <li>3-3, 5 su bardağı un </li>
+          <li>1 çay bardağı ılık su </li>
+          <li>1 çay bardağı ılık süt</li>
+          <li>Yarım çay bardağı sıvı yağ̆</li>
+          <li>1 yemek kaşığı yoğurt</li>
+          <li>Yarım paket yaş maya</li>
+          <li>1 yemek kaşığı şeker</li>
+          <li>1 tatlı kaşığı tuz</li>
+          <li>Bir yumurta aki sarısı üzerine</li>
+          <li>1 dolu yemek kaşığı yumuşak tereyağ</li>
+          <li>Susam</li>
+        </ul>
+        <p>Sosu için:
+
+        <p>Sosu için;</p>  
+        <ul>
+          <li>3 yemek kaşığı mayonez </li>
+          <li>1,5 yemek kaşığı ketçap</li>
+          <li>1 yemek kaşığı hardal</li>
+          <li>1 çay kaşığı elma sirkesi</li>
+          <li>1 adet küçük küpler halinde doğranmış kornişon turşu</li>
+          <li>Tuz, karabiber</li>
+        </ul>
+        <p>Karamelize soğan;</p>  
+        <ul>
+          <li>3 adet soğan </li>
+          <li>4-5 yemek kaşığı zeytinyağ</li>
+          <li>1 tatlı kaşığı şeker</li>
+          <li>1 yemek kaşığı sirke</li>
+          <li>Tuz</li>
+        </ul>
+
+        <hr />
+
+        <h3>Yapılışı</h3>
+        <p>
+          Ekmeği için:Maya, şeker, ılık su ve süt uygun bir kaba alınır ve maya eriyene kadar karıştırılır.
+Sıvı yağ̆, yumurta akı, yoğurt ve tuz eklenir.
+Unu azar azar ekleyip güzel yumuşak kıvamlı bir hamur elde edin.
+En son aşamda oda sıcaklığında yumuşamış tereyağı ilave edip hamura yedirin.
+Kabın üzerini streçleyip 1 saat maylandırın.
+Maya süresinden sonra hamurun fazla havasını yavaşça yoğurarak alın.
+7 eşit beze elde edin ve ellinizle yuvarlayarak fırın kağıdı serilmiş tepsiye aralıklı dizin.
+Üzerini tekrar örtüp 20 dakika tepside maylandırın.
+Mayalanan bezelerin üstüne fazla bastırmadan fırçayla yumurta sarısını sürüp susam serpin.
+Önceden ısıtılmış 190 derce fırında altı üstü kızarana kadar pişirin.
+Sosu için; Bütün sos malzemeleri uygun bir kase içersine alın ve karıştırın. Buzdolabında bekletin.
+Karamelize soğan için:Soğanları piyazlık (yarım ay şeklinde) doğranir. Yağı uygun bir tavada kızdırılır ve soğanlar eklenir.
+Kısık-orta hararetli ateşte sık sık karıştırarak iyice sararıp yumuşayana kadar pişirilir.
+Şeker ve sirkeyi eklenip devam karıştırılır.
+Altını hafif açıp sürekli karıştırarak hafif karamel rengini alana kadar 5 dk. Daha pişirilir.
+Damak zevkinize göre tuz ekleyip ocaktan alın.
+Köftesi için:Uygun bir kaba kıyma, tuz, karabiberi, pekmez ve hardalı alın.
+Fazla yoğurmadan bütün malzemeleri özeleştirin.
+Hamburger köftesi diğer köfteler gibi fazla yoğurulmaz ve içersine galeta unu, yumurta, maydanoz gibi malzemeler girmez.
+Kıymadan 7 parça (100gr) ayırıp ellinizle top şekli verin ve her bir parçaya yuvarlak yassı şekil verin. (ellerinizi hafif ıslatarak şekillendirebilir veya büyük bir kavanoz kapağı kullanabilirsiniz diğer bir alternatif streç fılm arasına koyup merdanyle açmak ).
+Köftelerin üzeri kapatılır ve 30 dakika buzdolabında dinlendirilir.
+Teflon ızgara veya yapışmaz bir tava ocağa alınır ve ısıtılır.
+Tava ısındığında yağ ilavesi yapmadan köfte tavada kızartılır. (baş parmağınızla orta kısmına bastırarak düz, toparlanamayan bir köfte elde bilirsiniz. ).
+Köfte üzerine bir dilim peynir koyulur ve üzerine bir kapak kapatarak peynir eritilir.
+Hamburger ekmeğin iç kısımlarını tavada işitilir hazırladığımız sos alt ekmeğe sürülür, salata yaprağı ve domates koyulur. Köfte yerleştırilir ve onun üzerine soğanlar koyulur.
+İstediğiniz garnitür kullanarak hamburgerleri hazır hale getirilebilirsiniz. Afiyet olsun!
+        </p>
+
+        <a href="web.html" class="btn btn-primary mt-3">◀ Geri dön</a>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
